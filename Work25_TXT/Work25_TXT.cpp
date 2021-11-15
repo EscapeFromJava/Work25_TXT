@@ -41,6 +41,7 @@ int main()
     if (fileOutput.is_open()) {
         fileOutput << sum << endl;
     }
+    fileOutput.close();
 
     delete[] arr;
     return 0;
