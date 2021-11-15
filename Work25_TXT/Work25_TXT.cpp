@@ -12,14 +12,15 @@ int main()
 {
     setlocale(LC_ALL, "rus");
     string fname;
-    int size = 100, value;
-    int* arr = new int [size] {};
+    int size, value;
+    int* arr = NULL; // NULL писать обязательно
     cout << "Введите имя файла для считывания данных [input.txt]: " << endl;
     cin >> fname;
     ifstream fileInput(fname);
     if (fileInput.is_open()) {
         int i = 0;
         fileInput >> size;
+        arr = new int [size];
         while (fileInput >> value) {
             arr[i] = value;
             i++;
